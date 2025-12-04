@@ -9,7 +9,7 @@ const cleanArr = [...searchSpan].map((span) => {
 });
 
 const totalPopulation = cleanArr.reduce((sum, current) => sum + current, 0);
-const averagePopulation = totalPopulation / cleanArr.length;
+const averagePopulation = Math.round(totalPopulation / cleanArr.length);
 
 const formattedTotal = totalPopulation.toLocaleString('en-US');
 const formattedAverage = averagePopulation.toLocaleString('en-US');
